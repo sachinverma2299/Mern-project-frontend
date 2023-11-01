@@ -1,17 +1,23 @@
 import React from "react";
+import Avatar from "../../shared/components/UIElements/Avatar";
+import { Link } from "react-router-dom";
+import Card from "../../shared/components/UIElements/Card";
+import './UserItem.css'
 
 const UserItem = (props) => {
     return (
         <li className="user-item">
-            <div className="user-item_content">
-                <div className="user-item_image">
-                    <img src={props.images} alt={props.name}></img>
-                </div>
-                <div className="user-item_info">
-                    <h2>{props.name}</h2>
-                    <h3>{props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places' }</h3>
-                </div>
-            </div>
+            <Card className="user-item_content">
+                <Link to={`/${props.id}/places`}>
+                    <div className="user-item_image">
+                        <Avatar className="img" image={props.image} alt={props.image}></Avatar>
+                    </div>
+                    <div className="user-item_info">
+                        <h2>{props.name}</h2>
+                        <h3>{props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places' }</h3>
+                    </div>
+                </Link>
+            </Card>
         </li>
     )
 

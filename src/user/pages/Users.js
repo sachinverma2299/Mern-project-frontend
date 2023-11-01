@@ -6,7 +6,7 @@ const Users = () => {
         {
             id:'u1',
             name:'Sachin verma',
-            image:'https://media.zigcdn.com/media/content/2023/Mar/cover_641aba80ead92.jpg',
+            image:'https://wallpaper-house.com/data/out/8/wallpaper2you_267943.jpg',
             places:3
         }
     ];
