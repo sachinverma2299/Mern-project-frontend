@@ -69,6 +69,5 @@ const Input = (props) => {
             {!inputState.isValid && inputState.isTouched && <p>{props.errorText}</p>}
         </div>
     )
-
 }
 export default Input
