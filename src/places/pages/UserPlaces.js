@@ -19,13 +19,13 @@ const UserPlaces = () => {
           `http://localhost:5000/places/user/${userId}`
         );
         setLoadedPlaces(responseData.places);
-      } catch (err) {}
+      } catch (err) {} 
     };
     fetchPlaces();
   }, [sendRequest, userId]);
 
   const placeDeletedHandler=(deletedPlaceId)=>{
-    setLoadedPlaces(prevPlaces=> prevPlaces.filter(place =>place.id != deletedPlaceId))
+    setLoadedPlaces(prevPlaces=> prevPlaces.filter(place =>place.id !== deletedPlaceId))
   }
 
   return (
